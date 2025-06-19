@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-12 rounded-[45px] shadow-custom-dark gap-x-10 grid grid-cols-2"
+    class="p-12 rounded-[45px] hover:scale-[1.002] shadow-custom-dark gap-x-10 grid grid-cols-2"
     :class="bgClass"
   >
     <div class="flex flex-col justify-between">

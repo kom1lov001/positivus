@@ -70,7 +70,7 @@
         </svg>
       </div>
       <ul
-        class="lg:flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 hidden items-center bottom-border"
+        class="lg:flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center hidden bottom-border"
       >
         <li>
           <router-link class="a cursor-pointer" to="/">About us</router-link>
@@ -89,7 +89,11 @@
           <VButton className="" type="border_dark">Request a quote</VButton>
         </div>
       </ul>
-      <button class="btn lg:hidden flex btn-square btn-ghost">
+      <button
+        @click="openMenu"
+        class="btn lg:hidden flex btn-square btn-ghost"
+        :class="isMenuOpen ? 'z-40 fixed  md:right-10 right-5' : ''"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -104,12 +108,66 @@
           ></path>
         </svg>
       </button>
+
+      <ul
+        :class="[
+          'bottom-border fixed w-full top-0 bg-dark/95  text-white/50 space-y-4 flex items-center justify-center flex-col bottom-0 transition-all duration-300 ease-in-out lg:hidden',
+          isMenuOpen
+            ? 'left-1/2 -translate-x-1/2'
+            : '-left-1/2 -translate-x-1/2',
+        ]"
+      >
+        <li @click="openMenu">
+          <router-link
+            class="text-xl tracking-wide leading-4 cursor-pointer"
+            to="/"
+            >About us</router-link
+          >
+        </li>
+        <li @click="openMenu">
+          <router-link
+            class="text-xl tracking-wide leading-relaxed cursor-pointer"
+            to="/"
+            >Services</router-link
+          >
+        </li>
+        <li @click="openMenu">
+          <router-link
+            class="text-xl tracking-wide leading-relaxed cursor-pointer"
+            to="/"
+            >Use Cases</router-link
+          >
+        </li>
+        <li @click="openMenu">
+          <router-link
+            class="text-xl tracking-wide leading-relaxed cursor-pointer"
+            to="/"
+            >Pricing</router-link
+          >
+        </li>
+        <li @click="openMenu">
+          <router-link
+            class="text-xl tracking-wide leading-relaxed cursor-pointer"
+            to="/"
+            >Blog</router-link
+          >
+        </li>
+        <!-- <div>
+          <VButton className="" type="border_dark">Request a quote</VButton>
+        </div> -->
+      </ul>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import VButton from "../../VButton.vue";
+const isMenuOpen = ref(false);
+
+function openMenu() {
+  isMenuOpen.value = !isMenuOpen.value;
+}
 </script>
 
 <style lang="scss">

@@ -1,15 +1,13 @@
-// import { createWebHistory, createRouter } from "vue-router";
-
+import { createWebHistory, createRouter } from "vue-router";
+import { routes, handleHotUpdate } from "vue-router/auto-routes";
 // import LandingPageView from "../views/nexcent/LandingView.vue";
 // import back from "../views/back.vue";
 
-// const routes = [
-//   { path: "/", component: LandingPageView },
-//   { path: "/bv", component: back },
-// ];
-
-// const router = createRouter({
-//   history: createWebHistory(),
-//   routes,
-// });
-// export default router;
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+if (import.meta.hot) {
+  handleHotUpdate(router);
+}
+export default router;

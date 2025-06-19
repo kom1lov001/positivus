@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-[14px] sm:inline-flex text-center cursor-pointer"
+    class="rounded-[14px] sm:inline-flex text-center cursor-pointer active:!scale-[0.995]"
     :class="[
       props.className == '' ? 'px-[35px] py-[20px]' : props.className,
       props.type == 'primary'
