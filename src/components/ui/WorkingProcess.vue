@@ -65,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "process";
+import { ref } from "vue";
 
 const isOpen = ref(false);
 const props = defineProps<{

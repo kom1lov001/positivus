@@ -209,6 +209,29 @@
         :title="desciption[5].title"
         :description="desciption[5].description"
       ></OverLabel>
+      <div class="bg-lightDark min-h-[625px] rounded-[45px]">
+        <div
+          class="relative bg-black text-white border border-lime-400 p-6 rounded-2xl max-w-xl"
+        >
+          <p class="text-white text-base leading-relaxed">
+            ”We have been working with Positivus for the past year and have seen
+            a significant increase in website traffic and leads as a result of
+            their efforts. The team is professional, responsive, and truly cares
+            about the success of our business. We highly recommend Positivus to
+            any company looking to grow their online presence.”
+          </p>
+
+          <div
+            class="absolute -bottom-3 left-8 w-0 h-0 border-l-[12px] border-r-[12px] border-t-[12px] border-l-transparent border-r-transparent border-t-lime-400"
+          ></div>
+        </div>
+
+        <!-- <div class="flex items-center relative">
+          <div
+            class="message-card border-[1px] relative rounded-[45px] top-0 rounded- min-h-[237px] min-w-[606px] border-primary"
+          ></div>
+        </div> -->
+      </div>
     </div>
     <div class="pb-[140px]">
       <OverLabel
@@ -322,5 +345,15 @@ const desciption = ref({
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+.message-card {
+}
+.message-card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  background: red;
+  height: 40px;
+  width: 100%;
 }
 </style>
