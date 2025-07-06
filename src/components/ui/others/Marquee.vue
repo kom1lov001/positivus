@@ -1,10 +1,6 @@
 <template>
   <div class="py-[70px]">
-    <Vue3Marquee
-      :duration="30"
-      :pauseOnHover="true"
-      class="flex items-center !gap-10"
-    >
+    <Vue3Marquee :duration="30" :pauseOnHover="true" class="flex items-center !gap-10">
       <img
         height="48"
         width="110.57"
