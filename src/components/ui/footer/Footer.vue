@@ -1,11 +1,11 @@
 <template>
-  <footer class="bg-lightDark px-[60px] pt-[55px] pb-[50px] rounded-t-[45px]">
+  <footer class="rounded-t-[45px] bg-lightDark px-[60px] pb-[50px] pt-[55px]">
     <div class="flex items-center justify-between">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="180"
-          class="w-[180px] h-[35px]"
+          class="h-[35px] w-[180px]"
           viewBox="0 0 220 56"
           fill="none"
         >
@@ -58,18 +58,13 @@
               <rect width="219.537" height="56" fill="white" />
             </clipPath>
             <clipPath id="clip1_330_1193">
-              <rect
-                width="36"
-                height="36"
-                fill="white"
-                transform="translate(0 10)"
-              />
+              <rect width="36" height="36" fill="white" transform="translate(0 10)" />
             </clipPath>
           </defs>
         </svg>
       </div>
       <ul
-        class="lg:flex gap-4 sm:gap-6 md:gap-8 text-white lg:gap-10 hidden items-center bottom-border2"
+        class="bottom-border2 hidden items-center gap-4 text-white sm:gap-6 md:gap-8 lg:flex lg:gap-10"
       >
         <li>
           <router-link class="a cursor-pointer" to="/">About us</router-link>
@@ -88,9 +83,9 @@
         </li>
       </ul>
       <div class="flex items-center gap-5">
-        <div class="!w-[30px] h-[30px] rounded-full bg-white"></div>
-        <div class="!w-[30px] h-[30px] rounded-full bg-white"></div>
-        <div class="!w-[30px] h-[30px] rounded-full bg-white"></div>
+        <div class="h-[30px] !w-[30px] rounded-full bg-white"></div>
+        <div class="h-[30px] !w-[30px] rounded-full bg-white"></div>
+        <div class="h-[30px] !w-[30px] rounded-full bg-white"></div>
       </div>
     </div>
   </footer>
@@ -107,7 +102,7 @@
   transition: all 0.5s ease;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 1px;
     left: 0;

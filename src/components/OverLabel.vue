@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col sm:flex-row items-center gap-10">
-    <h1 class="bg-primary inline-block px-2 text-3xl rounded font-semibold">
+  <div class="flex flex-col items-center gap-10 sm:flex-row">
+    <h1 class="inline-block rounded bg-primary px-2 text-3xl font-semibold">
       {{ props.title }}
     </h1>
     <p class="max-w-lg text-[15.9px] leading-[16px]">
@@ -13,11 +13,11 @@
 const props = defineProps({
   title: {
     type: String,
-    default: "",
+    default: '',
   },
   description: {
     type: String,
-    default: "",
+    default: '',
   },
 });
 </script>

@@ -1,27 +1,12 @@
 <template>
-  <div
-    id="happen_digital"
-    class="bg-gray grid md:grid-cols-2 sm:h-[347px] relative rounded-[45px]"
-  >
-    <div class="p-[60px] md:max-w-[500px] w-full space-y-[26px]">
+  <div id="happen_digital" class="relative grid rounded-[45px] bg-gray sm:h-[347px] md:grid-cols-2">
+    <div class="w-full space-y-[26px] p-[60px] md:max-w-[500px]">
       <h1 class="text-2xl font-semibold">Let’s make things happen</h1>
-      <p class="text-sm">
-        Contact us today to learn more about how our digital marketing services
-        can help your business grow and succeed online.
-      </p>
+      <p class="text-sm">Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
       <VButton type="primary">Get your free proposal</VButton>
     </div>
-    <div
-      class="absolute hidden md:block top-[50%] right-[10%] translate-x-[10%] translate-y-[-50%]"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="359"
-        class=""
-        height="395"
-        viewBox="0 0 359 395"
-        fill="none"
-      >
+    <div class="absolute right-[10%] top-[50%] hidden translate-x-[10%] translate-y-[-50%] md:block">
+      <svg xmlns="http://www.w3.org/2000/svg" width="359" class="" height="395" viewBox="0 0 359 395" fill="none">
         <path
           d="M169 163.5C215.644 163.5 257.858 167.471 288.398 173.887C303.673 177.095 316 180.91 324.497 185.13C328.746 187.24 332.011 189.439 334.208 191.694C336.403 193.948 337.5 196.222 337.5 198.5C337.5 200.778 336.403 203.052 334.208 205.306C332.011 207.561 328.746 209.76 324.497 211.87C316 216.09 303.673 219.905 288.398 223.113C257.858 229.529 215.644 233.5 169 233.5C122.356 233.5 80.1417 229.529 49.6016 223.113C34.3275 219.905 21.9997 216.09 13.5029 211.87C9.25392 209.76 5.98872 207.561 3.79199 205.306C1.59696 203.052 0.5 200.778 0.5 198.5C0.5 196.222 1.59696 193.948 3.79199 191.694C5.98872 189.439 9.25392 187.24 13.5029 185.13C21.9997 180.91 34.3275 177.095 49.6016 173.887C80.1417 167.471 122.356 163.5 169 163.5Z"
           stroke="black"
@@ -38,14 +23,8 @@
           d="M252.343 66.6289L252.511 67.5342L253.179 66.9004L300.312 22.1758L272.341 80.8232L271.944 81.6543L272.857 81.5342L337.277 73.0547L280.177 104.061L279.367 104.5L280.177 104.939L337.277 135.944L272.857 127.466L271.944 127.346L272.341 128.177L300.312 186.823L253.179 142.1L252.511 141.466L252.343 142.371L240.5 206.259L228.657 142.371L228.489 141.466L227.821 142.1L180.688 186.823L208.659 128.177L209.056 127.346L208.143 127.466L143.722 135.944L200.823 104.939L201.633 104.5L200.823 104.061L143.722 73.0547L208.143 81.5342L209.056 81.6543L208.659 80.8232L180.688 22.1758L227.821 66.9004L228.489 67.5342L228.657 66.6289L240.5 2.74023L252.343 66.6289Z"
           stroke="black"
         />
-        <path
-          d="M277 177L294.789 222.06L341.11 207.874L316.972 249.877L356.944 277.247L309.055 284.563L312.578 332.879L277 300L241.422 332.879L244.945 284.563L197.056 277.247L237.028 249.877L212.89 207.874L259.211 222.06L277 177Z"
-          fill="#D9D9D9"
-        />
-        <path
-          d="M112.194 306.102L135.134 264L158.258 306.102L200.269 329.134L158.258 352.166L135.134 394.269L112.194 352.166L70 329.134L112.194 306.102Z"
-          fill="#B9FF66"
-        />
+        <path d="M277 177L294.789 222.06L341.11 207.874L316.972 249.877L356.944 277.247L309.055 284.563L312.578 332.879L277 300L241.422 332.879L244.945 284.563L197.056 277.247L237.028 249.877L212.89 207.874L259.211 222.06L277 177Z" fill="#D9D9D9" />
+        <path d="M112.194 306.102L135.134 264L158.258 306.102L200.269 329.134L158.258 352.166L135.134 394.269L112.194 352.166L70 329.134L112.194 306.102Z" fill="#B9FF66" />
         <circle cx="152.5" cy="186.5" r="62" fill="black" stroke="black" />
         <ellipse cx="132" cy="173" rx="10" ry="20" fill="white" />
         <ellipse cx="173" cy="173" rx="10" ry="20" fill="white" />
@@ -55,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import VButton from "../VButton.vue";
+import VButton from '../VButton.vue';
 </script>
 
 <style scoped></style>

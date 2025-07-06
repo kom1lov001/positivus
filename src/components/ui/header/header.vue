@@ -1,5 +1,5 @@
 <template>
-  <header class="relative w-full left-0 top-[60px] z-10">
+  <header class="relative left-0 top-[60px] z-10 w-full">
     <div class="flex justify-between">
       <div>
         <svg
@@ -59,19 +59,12 @@
               <rect width="219.537" height="56" fill="white" />
             </clipPath>
             <clipPath id="clip1_330_1193">
-              <rect
-                width="36"
-                height="36"
-                fill="white"
-                transform="translate(0 10)"
-              />
+              <rect width="36" height="36" fill="white" transform="translate(0 10)" />
             </clipPath>
           </defs>
         </svg>
       </div>
-      <ul
-        class="lg:flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center hidden bottom-border"
-      >
+      <ul class="bottom-border hidden items-center gap-4 sm:gap-6 md:gap-8 lg:flex lg:gap-10">
         <li>
           <router-link class="a cursor-pointer" to="/">About us</router-link>
         </li>
@@ -91,8 +84,8 @@
       </ul>
       <button
         @click="openMenu"
-        class="btn lg:hidden flex btn-square btn-ghost"
-        :class="isMenuOpen ? 'z-40 fixed  md:right-10 right-5' : ''"
+        class="btn btn-ghost btn-square flex lg:hidden"
+        :class="isMenuOpen ? 'fixed right-5 z-40 md:right-10' : ''"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -111,44 +104,32 @@
 
       <ul
         :class="[
-          'bottom-border fixed w-full top-0 bg-dark/95  text-white/50 space-y-4 flex items-center justify-center flex-col bottom-0 transition-all duration-300 ease-in-out lg:hidden',
-          isMenuOpen
-            ? 'left-1/2 -translate-x-1/2'
-            : '-left-1/2 -translate-x-1/2',
+          'bottom-border fixed bottom-0 top-0 flex w-full flex-col items-center justify-center space-y-4 bg-dark/95 text-white/50 transition-all duration-300 ease-in-out lg:hidden',
+          isMenuOpen ? 'left-1/2 -translate-x-1/2' : '-left-1/2 -translate-x-1/2',
         ]"
       >
         <li @click="openMenu">
-          <router-link
-            class="text-xl tracking-wide leading-4 cursor-pointer"
-            to="/"
+          <router-link class="cursor-pointer text-xl leading-4 tracking-wide" to="/"
             >About us</router-link
           >
         </li>
         <li @click="openMenu">
-          <router-link
-            class="text-xl tracking-wide leading-relaxed cursor-pointer"
-            to="/"
+          <router-link class="cursor-pointer text-xl leading-relaxed tracking-wide" to="/"
             >Services</router-link
           >
         </li>
         <li @click="openMenu">
-          <router-link
-            class="text-xl tracking-wide leading-relaxed cursor-pointer"
-            to="/"
+          <router-link class="cursor-pointer text-xl leading-relaxed tracking-wide" to="/"
             >Use Cases</router-link
           >
         </li>
         <li @click="openMenu">
-          <router-link
-            class="text-xl tracking-wide leading-relaxed cursor-pointer"
-            to="/"
+          <router-link class="cursor-pointer text-xl leading-relaxed tracking-wide" to="/"
             >Pricing</router-link
           >
         </li>
         <li @click="openMenu">
-          <router-link
-            class="text-xl tracking-wide leading-relaxed cursor-pointer"
-            to="/"
+          <router-link class="cursor-pointer text-xl leading-relaxed tracking-wide" to="/"
             >Blog</router-link
           >
         </li>
@@ -161,8 +142,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import VButton from "../../VButton.vue";
+import { ref } from 'vue';
+import VButton from '../../VButton.vue';
 const isMenuOpen = ref(false);
 
 function openMenu() {
@@ -178,7 +159,7 @@ function openMenu() {
   transition: all 0.5s ease;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
